@@ -1,0 +1,125 @@
+@import "tailwindcss";
+@plugin "daisyui"{
+  themes: light --default, dark --prefersdark, cupcake;
+}
+
+@theme{
+    --font-worksan: 'Work Sans', ui-sans-serif, system-ui, sans-serif;
+    --font-mont: 'Montserrat', ui-sans-serif, system-ui, sans-serif;
+    --font-manrope: 'Manrope', ui-sans-serif, system-ui, sans-serif;
+    --font-bangla: 'Anek Bangla', ui-sans-serif, system-ui, sans-serif;
+}
+
+@layer components{
+    h1 {
+        @apply text-(--black) text-(--grey) text-[2rem] font-bold leading-8;
+    }
+
+    h2 {
+        @apply text-(--black) text-2xl font-bold;
+    }
+
+    h3 {
+        @apply text-(--black) text-(--grey) text-xl font-semibold;
+    }
+
+    h4 {
+        @apply text-(--black) text-lg font-semibold leading-6.5;
+    }
+
+    h5{
+        @apply text-(--grey) font-normal leading-5.5;
+    }
+
+    p {
+        @apply text-(--dark-grey) text-sm font-normal leading-5 mb-2;
+    }
+
+    ul > li {
+        @apply text-(--dark-grey) text-xs font-normal leading-5 list-disc list-inside;
+    }
+
+    .summary{
+        @apply text-(--grey) text-sm font-normal leading-5;
+    }
+
+    output {
+        @apply text-(--grey) font-medium;
+    }
+
+     .btn {
+        @apply text-(--white) bg-(--primary) rounded-lg py-2 px-4 text-sm font-medium leading-5;
+    }
+
+     .btn-secondary {
+        @apply text-(--primary) bg-(--stroke) rounded-lg py-2 px-4 text-sm font-medium leading-5;
+    }
+
+     .btn-green {
+        @apply text-(--white) bg-(--green) rounded-lg py-2 px-4 text-sm font-medium leading-5;
+    }
+
+     .btn-red {
+        @apply text-(--white) bg-(--red) rounded-lg py-2 px-4 text-sm font-medium leading-5;
+    }
+
+     .btn-disabled {
+        @apply text-(--grey) bg-(--stroke) rounded-lg py-2 px-4 text-sm font-medium leading-5 cursor-not-allowed;
+    }
+
+    .flex-center-col-x{
+        @apply flex flex-col justify-center;
+    }
+
+    .flex-center-col-y{
+        @apply flex flex-col items-center;
+    }
+
+    .flex-center-col{
+        @apply flex flex-col justify-center items-center;
+    }
+
+    .flex-y{
+        @apply flex flex-col;
+    }
+
+    .flex-center-row-x{
+        @apply flex flex-row justify-center;
+    }
+
+    .flex-center-row-y{
+        @apply flex flex-row items-center;
+    }
+
+    .flex-center-row{
+        @apply flex flex-row justify-center items-center;
+    }
+
+    .flex-x{
+        @apply flex flex-row;
+    }
+
+    .flex-center-x{
+        @apply flex justify-center;
+    }
+
+    .flex-center-y{
+        @apply flex items-center;
+    }
+
+    .flex-center{
+        @apply flex justify-center items-center;
+    }
+
+    .flex-between{
+        @apply flex justify-between;
+    }
+
+    .flex-around{
+        @apply flex justify-around;
+    }
+
+    .flex-evenly{
+        @apply flex justify-evenly;
+    }
+}

@@ -1,0 +1,60 @@
+/*`font-display: swap` what does it do?
+It tells the browser to use system font until the web apps font is loaded.*/
+
+/* Manrope */
+@font-face { font-family: 'Manrope'; src: url('./Manrope/Manrope-ExtraLight.woff2'); font-weight: 200; font-style: normal; font-display: swap; }
+@font-face { font-family: 'Manrope'; src: url('./Manrope/Manrope-Light.woff2');      font-weight: 300; font-style: normal; font-display: swap; }
+@font-face { font-family: 'Manrope'; src: url('./Manrope/Manrope-Regular.woff2');    font-weight: 400; font-style: normal; font-display: swap; }
+@font-face { font-family: 'Manrope'; src: url('./Manrope/Manrope-Medium.woff2');     font-weight: 500; font-style: normal; font-display: swap; }
+@font-face { font-family: 'Manrope'; src: url('./Manrope/Manrope-SemiBold.woff2');   font-weight: 600; font-style: normal; font-display: swap; }
+@font-face { font-family: 'Manrope'; src: url('./Manrope/Manrope-Bold.woff2');       font-weight: 700; font-style: normal; font-display: swap; }
+@font-face { font-family: 'Manrope'; src: url('./Manrope/Manrope-ExtraBold.woff2');  font-weight: 800; font-style: normal; font-display: swap; }
+
+/* Montserrat */
+@font-face { font-family: 'Montserrat'; src: url('./Montserrat/Montserrat-Thin.woff2');           font-weight: 100; font-style: normal; font-display: swap; }
+@font-face { font-family: 'Montserrat'; src: url('./Montserrat/Montserrat-ThinItalic.woff2');     font-weight: 100; font-style: italic; font-display: swap; }
+@font-face { font-family: 'Montserrat'; src: url('./Montserrat/Montserrat-ExtraLight.woff2');     font-weight: 200; font-style: normal; font-display: swap; }
+@font-face { font-family: 'Montserrat'; src: url('./Montserrat/Montserrat-ExtraLightItalic.woff2'); font-weight: 200; font-style: italic; font-display: swap; }
+@font-face { font-family: 'Montserrat'; src: url('./Montserrat/Montserrat-Light.woff2');          font-weight: 300; font-style: normal; font-display: swap; }
+@font-face { font-family: 'Montserrat'; src: url('./Montserrat/Montserrat-LightItalic.woff2');    font-weight: 300; font-style: italic; font-display: swap; }
+@font-face { font-family: 'Montserrat'; src: url('./Montserrat/Montserrat-Regular.woff2');        font-weight: 400; font-style: normal; font-display: swap; }
+@font-face { font-family: 'Montserrat'; src: url('./Montserrat/Montserrat-Italic.woff2');         font-weight: 400; font-style: italic; font-display: swap; }
+@font-face { font-family: 'Montserrat'; src: url('./Montserrat/Montserrat-Medium.woff2');         font-weight: 500; font-style: normal; font-display: swap; }
+@font-face { font-family: 'Montserrat'; src: url('./Montserrat/Montserrat-MediumItalic.woff2');   font-weight: 500; font-style: italic; font-display: swap; }
+@font-face { font-family: 'Montserrat'; src: url('./Montserrat/Montserrat-SemiBold.woff2');       font-weight: 600; font-style: normal; font-display: swap; }
+@font-face { font-family: 'Montserrat'; src: url('./Montserrat/Montserrat-SemiBoldItalic.woff2'); font-weight: 600; font-style: italic; font-display: swap; }
+@font-face { font-family: 'Montserrat'; src: url('./Montserrat/Montserrat-Bold.woff2');           font-weight: 700; font-style: normal; font-display: swap; }
+@font-face { font-family: 'Montserrat'; src: url('./Montserrat/Montserrat-BoldItalic.woff2');     font-weight: 700; font-style: italic; font-display: swap; }
+@font-face { font-family: 'Montserrat'; src: url('./Montserrat/Montserrat-ExtraBold.woff2');      font-weight: 800; font-style: normal; font-display: swap; }
+@font-face { font-family: 'Montserrat'; src: url('./Montserrat/Montserrat-ExtraBoldItalic.woff2'); font-weight: 800; font-style: italic; font-display: swap; }
+@font-face { font-family: 'Montserrat'; src: url('./Montserrat/Montserrat-Black.woff2');          font-weight: 900; font-style: normal; font-display: swap; }
+@font-face { font-family: 'Montserrat'; src: url('./Montserrat/Montserrat-BlackItalic.woff2');    font-weight: 900; font-style: italic; font-display: swap; }
+
+/* Work Sans */
+@font-face { font-family: 'Work Sans'; src: url('./Work_Sans/WorkSans-Thin.woff2');           font-weight: 100; font-style: normal; font-display: swap; }
+@font-face { font-family: 'Work Sans'; src: url('./Work_Sans/WorkSans-ThinItalic.woff2');     font-weight: 100; font-style: italic; font-display: swap; }
+@font-face { font-family: 'Work Sans'; src: url('./Work_Sans/WorkSans-ExtraLight.woff2');     font-weight: 200; font-style: normal; font-display: swap; }
+@font-face { font-family: 'Work Sans'; src: url('./Work_Sans/WorkSans-ExtraLightItalic.woff2'); font-weight: 200; font-style: italic; font-display: swap; }
+@font-face { font-family: 'Work Sans'; src: url('./Work_Sans/WorkSans-Light.woff2');          font-weight: 300; font-style: normal; font-display: swap; }
+@font-face { font-family: 'Work Sans'; src: url('./Work_Sans/WorkSans-LightItalic.woff2');    font-weight: 300; font-style: italic; font-display: swap; }
+@font-face { font-family: 'Work Sans'; src: url('./Work_Sans/WorkSans-Regular.woff2');        font-weight: 400; font-style: normal; font-display: swap; }
+@font-face { font-family: 'Work Sans'; src: url('./Work_Sans/WorkSans-Italic.woff2');         font-weight: 400; font-style: italic; font-display: swap; }
+@font-face { font-family: 'Work Sans'; src: url('./Work_Sans/WorkSans-Medium.woff2');         font-weight: 500; font-style: normal; font-display: swap; }
+@font-face { font-family: 'Work Sans'; src: url('./Work_Sans/WorkSans-MediumItalic.woff2');   font-weight: 500; font-style: italic; font-display: swap; }
+@font-face { font-family: 'Work Sans'; src: url('./Work_Sans/WorkSans-SemiBold.woff2');       font-weight: 600; font-style: normal; font-display: swap; }
+@font-face { font-family: 'Work Sans'; src: url('./Work_Sans/WorkSans-SemiBoldItalic.woff2'); font-weight: 600; font-style: italic; font-display: swap; }
+@font-face { font-family: 'Work Sans'; src: url('./Work_Sans/WorkSans-Bold.woff2');           font-weight: 700; font-style: normal; font-display: swap; }
+@font-face { font-family: 'Work Sans'; src: url('./Work_Sans/WorkSans-BoldItalic.woff2');     font-weight: 700; font-style: italic; font-display: swap; }
+@font-face { font-family: 'Work Sans'; src: url('./Work_Sans/WorkSans-ExtraBold.woff2');      font-weight: 800; font-style: normal; font-display: swap; }
+@font-face { font-family: 'Work Sans'; src: url('./Work_Sans/WorkSans-ExtraBoldItalic.woff2'); font-weight: 800; font-style: italic; font-display: swap; }
+@font-face { font-family: 'Work Sans'; src: url('./Work_Sans/WorkSans-Black.woff2');          font-weight: 900; font-style: normal; font-display: swap; }
+@font-face { font-family: 'Work Sans'; src: url('./Work_Sans/WorkSans-BlackItalic.woff2');    font-weight: 900; font-style: italic; font-display: swap; }
+
+@font-face { font-family: 'Anek Bangla'; src: url('./Anek_Bangla/AnekBangla-ExtraBold.woff2'); font-weight: 800; font-style: normal; font-display: swap; }
+@font-face { font-family: 'Anek Bangla'; src: url('./Anek_Bangla/AnekBangla-Bold.woff2'); font-weight: 700; font-style: normal; font-display: swap; }
+@font-face { font-family: 'Anek Bangla'; src: url('./Anek_Bangla/AnekBangla-SemiBold.woff2'); font-weight: 600; font-style: normal; font-display: swap; }
+@font-face { font-family: 'Anek Bangla'; src: url('./Anek_Bangla/AnekBangla-Medium.woff2'); font-weight: 500; font-style: normal; font-display: swap; }
+@font-face { font-family: 'Anek Bangla'; src: url('./Anek_Bangla/AnekBangla-Regular.woff2'); font-weight: 400; font-style: normal; font-display: swap; }
+@font-face { font-family: 'Anek Bangla'; src: url('./Anek_Bangla/AnekBangla-Light.woff2'); font-weight: 300; font-style: normal; font-display: swap; }
+@font-face { font-family: 'Anek Bangla'; src: url('./Anek_Bangla/AnekBangla-ExtraLight.woff2'); font-weight: 200; font-style: normal; font-display: swap; }
+@font-face { font-family: 'Anek Bangla'; src: url('./Anek_Bangla/AnekBangla-Thin.woff2'); font-weight: 100; font-style: normal; font-display: swap; }

@@ -1,0 +1,30 @@
+{
+  "name": "ph-assignment-5-github-issue-tracker",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.html",
+  "scripts": {
+    "start": "servor --browse --reload",
+    "dev": "tailwindcss -i ./src/twInput.css -o ./src/twOutput.css --watch 2>&1 | while IFS= read -r line; do echo \"[$(date '+%I:%M:%S %p')] $line\"; done",
+    "build": "tailwindcss -i ./src/twInput.css -o ./src/twOutput.css --minify",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "\"Daisy",
+    "UI\"",
+    "\"Tailwind",
+    "CSS\"",
+    "\"Vanilla",
+    "JavaScript\""
+  ],
+  "author": "Shakawat Hossain Sadik",
+  "license": "ISC",
+  "dependencies": {
+    "@tailwindcss/cli": "^4.2.1",
+    "tailwindcss": "^4.2.1"
+  },
+  "devDependencies": {
+    "servor": "^4.0.2",
+    "daisyui": "^5.5.19"
+  }
+}
