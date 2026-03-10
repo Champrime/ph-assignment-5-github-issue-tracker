@@ -1,6 +1,17 @@
 :root{
-    --loginShadow: 0 5px 10px 0 rgba(0, 0, 0, 0.08);
+    --loginShadow: 0 5px 10px 2px rgba(0, 0, 0, 0.08);
+    --issueShadow: 0 0px 10px 1px rgba(0, 0, 0, 0.08);
+    --cardShadow: 0 3px 6px 0px rgba(0, 0, 0, 0.08);
     --text2: #4A00FF;
     --input-border: #E4E4E7;
     --grey: #64748B;
+    --black: #1F2937;
+    --fuga: #00A96E;
+    --fuga-accent: #CBFADB;
+    --closed: #A855F7;
+    --closed-accent: #F0E2FF;
+}
+
+* {
+    font-family: 'Montserrat', sans-serif;
 }

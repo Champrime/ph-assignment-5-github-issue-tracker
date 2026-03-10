@@ -1,0 +1,1 @@
+const issueCount = document.getElementById("issue-count"), 

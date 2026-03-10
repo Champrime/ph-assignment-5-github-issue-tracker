@@ -1,6 +1,6 @@
 @import "tailwindcss";
 @plugin "daisyui"{
-  themes: cupcake --default, abyss --dark;
+  themes: light --default, synthwave --dark;
 }
 
 @theme{
@@ -12,7 +12,7 @@
 
 @layer components{
     h1 {
-        @apply text-(--black) text-(--grey) text-[2rem] font-bold leading-8;
+        @apply text-(--black) text-[2rem] font-bold leading-8;
     }
 
     h2 {
@@ -20,7 +20,7 @@
     }
 
     h3 {
-        @apply text-(--black) text-(--grey) text-xl font-semibold;
+        @apply text-(--black) text-xl font-semibold;
     }
 
     h4 {

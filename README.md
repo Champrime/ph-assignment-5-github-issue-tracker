@@ -9,7 +9,7 @@ This much flexibility can lead to unexpected errors, bugs and security issues.
 
 `let` fixes the modern problems of `var`. `let` is introduced in ES6. We can't completey re-declare a variable. But **we can change the value**. `let` also is bound by the block scope, which means that it can only be accessed and updated from the block where it was declared in or from the inner blocks. This makes it more secure and less error-prone than `var`.
 
-`const` is the most strict keyword among the three. It must always keep the same reference. No re-declaration, no update of value, no flexibility, totally locked
+`const` is the most strict keyword among the three. It must always keep the same reference. No re-declaration, no update of value, no flexibility, totally lockedlinkedin.com/in/shakawat-sadik
 .  
 Because of the safer behaviors, `let` and `const` are preferred over `var` in modern JavaScript, and `var` is generally avoided.
 
