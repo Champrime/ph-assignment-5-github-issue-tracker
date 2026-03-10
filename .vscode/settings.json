@@ -2,7 +2,7 @@
   "github.copilot.enable": {
     "*": true
   },
-  "editor.inlineSuggest.enabled": false, /*last false*/
+  "editor.inlineSuggest.enabled": true, /*last false*/
   "editor.quickSuggestions": {
     "other": true,
     "comments": true,

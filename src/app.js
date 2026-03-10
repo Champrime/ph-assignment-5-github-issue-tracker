@@ -58,7 +58,7 @@ const addCard = (dataSet) => {
                     <div id="card-${i}" class="status-based relative h-full border-white before:absolute rounded-lg shadow-(--cardShadow) p-2 md:p-3 lg:p-4 flex-y before:bg-(${data.status === "open" ? "--fuga" : "--closed"}) before:h-0.5 before:w-full before:top-0 before:left-0 before:rounded-t-lg">
                         <div class="flex-y gap-3">
                             <div class="flex-between flex-center-y">
-                                <span class="status-based flex-center bg-(${data.status === "open" ? "--fuga" : "--closed"}-accent) rounded-full p-0.5"><img src="./assets/Open-Status.png" alt="" class="spinner fa-spin"></span>
+                                <span class="status-based flex-center bg-(${data.status === "open" ? "--fuga" : "--closed"}-accent) rounded-full p-0.5"><img src="./assets/${data.status === "open" ? "Open" : "Closed"}-Status.png" alt="" class="spinner ${data.status === "open" ? "fa-spin" : ""}"></span>
                                 <span class="priority-based ${data.priority === "high" ? "red-badge" : (data.priority === "medium" ? "yellow-badge" : "pale-badge")} w-20 h-6 flex-center">${data.priority[0].toUpperCase()+data.priority.slice(1)}</span>
                             </div>
                             <div class="flex-y gap-2">
@@ -71,13 +71,13 @@ const addCard = (dataSet) => {
 
                             <hr class="text-(--input-border)">
 
-                            <div>
-                                <div class="flex-between text-(--grey)">
-                                    <p class="author-based">#1 by john_doe</p>
-                                    <p></p>
+                            <div class="flex-y">
+                                <div class="flex-between flex-y text-(--grey)">
+                                    <p class="author-based">#${i} by ${data.author}</p>
+                                    <p class="created-date-based">${data.createdAt.split("T")[0]}</p>
                                 </div>
                                 <div class="flex-between text-(--grey)">
-                                    <p class="created-date-based">1/15/2024</p>
+                                    <p class="hidden assignee-based">${data.assignee}</p>
                                     <p></p>
                                 </div>
                             </div>
