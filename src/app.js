@@ -1,8 +1,6 @@
 const issueCount = document.getElementById("issue-count");
 
 const container = document.getElementById("card-container");
-const openListed = document.querySelectorAll(".open-listed");
-const closeListed = document.querySelectorAll(".close-listed");
 
 const section_Tab = document.getElementById("tab-section");
 const all = document.getElementById("all-tab");
@@ -90,20 +88,34 @@ const addCard = (dataSet) => {
 section_Tab.addEventListener("click", (event) => {
     const btn = event.target.closest("button");
     if (!btn) return;
-    if(btn === all){
-        openListed.classList.replace("hidden", "block");
-        closeListed.classList.replace("hidden", "block");
+
+    const openListed = document.querySelectorAll(".open-listed");
+    const closeListed = document.querySelectorAll(".close-listed");
+
+    if (btn === all) {
+        if(!all.classList.contains("active")){
+            all.classList.add("active"); open_Tab.classList.remove("active"); closed_Tab.classList.remove("active");
+        };
+        openListed.forEach(el => el.classList.replace("hidden", "block") || el.classList.add("block"));
+        closeListed.forEach(el => el.classList.replace("hidden", "block") || el.classList.add("block"));
+        issueCount.innerText = openListed.length + closeListed.length;
     }
 
-    if(btn === open_Tab){
-        
-        openListed.classList.replace("hidden", "block");
-        closeListed.classList.replace("block", "hidden");
+    if (btn === open_Tab) {
+        if(!open_Tab.classList.contains("active")){
+            open_Tab.classList.add("active"); all.classList.remove("active"); closed_Tab.classList.remove("active");
+        }
+        openListed.forEach(el => el.classList.replace("hidden", "block") || el.classList.add("block"));
+        issueCount.innerText = openListed.length;
+        closeListed.forEach(el => el.classList.replace("block", "hidden") || el.classList.add("hidden"));
     }
 
-    if(btn === closed_Tab){
-        openListed.classList.replace("block", "hidden");
-        closeListed.classList.replace("hidden", "block");
+    if (btn === closed_Tab) {
+        if(!closed_Tab.classList.contains("active")){
+            closed_Tab.classList.add("active"); all.classList.remove("active"); open_Tab.classList.remove("active");
+        }
+        openListed.forEach(el => el.classList.replace("block", "hidden") || el.classList.add("hidden"));
+        issueCount.innerText = closeListed.length;
+        closeListed.forEach(el => el.classList.replace("hidden", "block") || el.classList.add("block"));
     }
-
 })

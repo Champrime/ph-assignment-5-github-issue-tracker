@@ -20,6 +20,12 @@ html, html * {
     font-family: 'Montserrat', sans-serif;
 }
 
+.active {
+    color: var(--text2);
+    background: var(--closed);
+    border: 1px solid var(--closed-accent);
+}
+
 h1, h2, h3, h4, h5, .red-badge, .yellow-badge {
     transition: color 0.3s, background-color 0.3s, border-color 0.3s;
 }

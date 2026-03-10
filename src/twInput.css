@@ -35,6 +35,10 @@
         @apply text-(--grey) font-normal leading-5.5;
     }
 
+    .active {
+        @apply bg-(--text2) border-(--closed) text-(--closed-accent);
+    }
+
     .green-badge{
         @apply text-(--fuga-accent) bg-[#00452d] border-(--fuga)
     }
