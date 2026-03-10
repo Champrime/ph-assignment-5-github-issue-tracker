@@ -33,6 +33,6 @@ document.getElementById("card-container").addEventListener("click", (e) => {
     watchStatus.textContent = status;
     watchPriority.textContent = priority.toUpperCase();
 
-    // Show clicked card in watch mode
+    // To show clicked card in watch mode
     selection.classList.remove("hidden");
 });

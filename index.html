@@ -57,10 +57,9 @@
                 </div>
             </section>
             <!-- section#card-container.grid.grid-cols-4.gap-3.p-6>div#card-1.border-white.border-t-purple-500.rounded-lg.shadow-.--cardShadow.p-4.flex-y>div.flex-y.gap-3>(div.flex-between>i+span.text-red-700.bg-red-300.border-red-700.rounded-2xl)+(div.flex-y.gap-2>h4+p.text-.--grey)+(div.flex-x.gap-1>span.text-red-700.bg-red-300.border-red-700.rounded-2xl+span.text-yellow-700.bg-yellow-300.border-yellow-700.rounded-2xl) -->
-
-            <!-- Tailwind JIT safelist: before:bg-(--fuga) before:bg-(--closed) bg-(--fuga-accent) bg-(--closed-accent) -->
+             
             <section id="card-container" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-3 p-1 sm:p-2 md:p-4 lg:p-6">
-                <div class="open-listed block">
+                <!-- <div class="open-listed block">
                     <div id="card-1" class="card status-based relative h-full border-white before:absolute rounded-lg shadow-(--cardShadow) p-2 md:p-3 lg:p-4 flex-y before:bg-(--closed) before:h-0.5 before:w-full before:top-0 before:left-0 before:rounded-t-lg">
                         <div class="flex-y gap-3">
                             <div class="flex-between flex-center-y">
@@ -94,52 +93,38 @@
                             </div>
                         </div>
                     </div>
-                </div>
+                </div> -->
             </section>
-            <!-- Modal Overlay -->
+
+            <!-- Watch Dogs 2 -->
             <div id="selection" class="hidden fixed inset-0 z-50 bg-black/50 flex-center p-4" onclick="if(event.target===this){this.classList.add('hidden')}">
-                <!-- Modal Card -->
-                <div id="select-card" class="relative w-full max-w-sm sm:max-w-md md:max-w-lg bg-white rounded-lg shadow-(--cardShadow) p-5 sm:p-6 md:p-8 flex-y gap-4 overflow-y-auto max-h-[90vh]">
-                    <!-- Title -->
-                    <h3 id="watch-title" class="text-base sm:text-lg md:text-xl font-bold">Fix navigation menu on mobile devices</h3>
+                <!-- Card Watch -->
+                <div id="select-card" class="relative w-full max-w-sm sm:max-w-md md:max-w-lg rounded-lg shadow-(--cardShadow) p-5 sm:p-6 md:p-8 flex-y gap-4 overflow-y-auto max-h-[90vh]">
+                    <h3 id="watch-title" class="text-base sm:text-lg md:text-xl font-bold"></h3>
 
-                    <!-- Status + Author + Date -->
                     <div class="flex-center-y flex-wrap gap-2 text-sm">
-                        <span id="watch-status" class="text-xs sm:text-sm text-white bg-green-500 rounded-md px-3 py-1 font-semibold">Open</span>
+                        <span id="watch-status" class="text-xs sm:text-sm rounded-md px-3 py-1 font-semibold"></span>
                         <span class="text-(--grey)">•</span>
-                        <span id="watch-author" class="text-(--grey) text-xs sm:text-sm">Opened by john_doe</span>
+                        <span id="watch-author" class="text-(--grey) text-xs sm:text-sm"></span>
                         <span class="text-(--grey)">•</span>
-                        <span id="watch-date" class="text-(--grey) text-xs sm:text-sm">15/01/2024</span>
+                        <span id="watch-date" class="text-(--grey) text-xs sm:text-sm"></span>
                     </div>
 
-                    <!-- Labels -->
-                    <div id="watch-labels" class="flex-x flex-wrap gap-2">
-                        <span class="red-badge flex-center-y gap-1 text-xs text-red-700 bg-red-100 border border-red-300 rounded-2xl px-2 py-1">
-                            <i class="fas fa-bug"></i> BUG
-                        </span>
-                        <span class="yellow-badge flex-center-y gap-1 text-xs text-yellow-700 bg-yellow-100 border border-yellow-300 rounded-2xl px-2 py-1">
-                            <i class="fas fa-life-ring"></i> HELP WANTED
-                        </span>
-                    </div>
+                    <div id="watch-labels" class="flex-x flex-wrap gap-2"></div>
 
-                    <!-- Description -->
-                    <p id="watch-description" class="text-(--grey) text-sm sm:text-base leading-relaxed">
-                        The navigation menu doesn't collapse properly on mobile devices. Need to fix the responsive behavior.
-                    </p>
+                    <p id="watch-description" class="text-(--grey) text-sm sm:text-base leading-relaxed"></p>
 
-                    <!-- Info Row -->
                     <div class="flex flex-col sm:flex-row gap-3 sm:gap-8 border border-(--input-border) rounded-lg p-3 sm:p-4">
                         <div class="flex-y gap-1">
                             <span class="text-(--grey) text-xs sm:text-sm">Assignee:</span>
-                            <span id="watch-assignee" class="font-semibold text-sm sm:text-base">jane_smith</span>
+                            <span id="watch-assignee" class="font-semibold text-sm sm:text-base"></span>
                         </div>
                         <div class="flex-y gap-1">
                             <span class="text-(--grey) text-xs sm:text-sm">Priority:</span>
-                            <span id="watch-priority" class="red-badge w-fit text-xs text-red-700 bg-red-100 border border-red-300 rounded-md px-2 py-0.5 font-semibold">HIGH</span>
+                            <span id="watch-priority" class="font-semibold text-sm sm:text-base"></span>
                         </div>
                     </div>
 
-                    <!-- Close Button -->
                     <div class="flex justify-end">
                         <button id="watch-close-btn" class="btn btn-primary rounded-md px-6 py-2 cursor-pointer" onclick="document.getElementById('selection').classList.add('hidden')">Close</button>
                     </div>
@@ -151,4 +136,5 @@
 <script src="./src/app.js"></script>
 <script src="./src/theme.js"></script>
 <script src="./src/watchCard.js"></script>
+<script src="./src/search.js"></script>
 </html>
