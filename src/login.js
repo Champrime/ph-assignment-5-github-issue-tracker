@@ -2,7 +2,7 @@ const username = document.getElementById("username"), password = document.getEle
 
 signInBtn.addEventListener("click", () => {
     if (username.value === "admin" && password.value === "admin123") {
-        window.location.href = "./index.html";
+        window.location.href = "./issues.html";
     } else {
         switch (true) {
             case username.value === "" && password.value === "":

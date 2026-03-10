@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="cupcake">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <link rel="preload" href="./fonts/Montserrat/Montserrat-Regular.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="stylesheet" href="./src/style.css">
+    <link rel="stylesheet" href="./fonts/font.css">
+    <link rel="stylesheet" href="./src/twOutput.css">
+    <link rel="shortcut icon" href="./B13-A5-Github-Issue-Tracker/assets/github-logo.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <header class="relative flex-center-col ">
+        <!-- theme switch -->
+        <button id="theme-btn" class="w-fit h-fit absolute text-center cursor-pointer top-0.5 right-0.5 sm:top-1.5 md:top-3 lg:top-5 sm:right-1 md:right-3 lg:right-5 btn btn-primary rounded-full px-0.5 py-0.75"><i id="theme-icon" class="fas fa-sun"></i></button>
+
+        <div class="w-full flex flex-col md:flex-row justify-center gap-3 md:justify-between items-center px-8 md:px-12 lg:px-20 py-2 md:py-3 ld:py-4">
+            <div class="flex-center-y gap-1">
+                <img src="./assets/github-logo.png" alt="GittuHub Logo" class="w-9 h-9">
+                <h2 class="">GitHub Issue Tracker</h2>
+            </div>
+            <div class="flex flex-wrap md:flex-nowrap gap-2 md:gap-4 justify-center md:justify-between items-center">
+                <div class="relative">
+                    <i class="fa fa-search absolute left-2 top-3 text-(--grey) pointer-events-none"></i>
+                    <input type="text" id="searchInput" class="w-67 border border-(--input-border) focus:outline-2 focus:outline-(--input-border) rounded-sm pl-8 pr-4 py-2 text---grey" placeholder="Search issues...">
+                </div>
+                <button id="newIssueBtn" class="btn btn-primary rounded-sm"><span class="text-2xl text-center">+</span><span class="text-center">New Issue</span></button>
+            </div>
+        </div>
+    </header>
+    <main class="flex-y gap-2 md:gap-3 lg:gap-4 px-5 sm:px-11 md:px-21 lg:px-41 xl:px-61 py-5 sm:py-8 md:py-10 lg:py-12 xl:py-15">
+        <section id="tab-section" class="flex-x justify-center md:justify-start flex-wrap md:flex-nowrap gap-2 border-white rounded-lg shadow-(--issueShadow) p-6">
+            <button id="all-tab" class="active btn btn-primary w-24 flex-center px-3 py-2">All</button>
+            <button id="open-tab" class="btn btn-primary w-24 flex-center px-3 py-2">Open</button>
+            <button id="closed-tab" class="btn btn-primary w-24 flex-center px-3 py-2">Closed</button>
+        </section>
+        <section id="issueContainer" class="border-white rounded-lg shadow-(--issueShadow)">
+            <section class="flex flex-col gap-4 justify-center md:flex-row md:justify-between items-center p-6">
+                <div class="flex-center-y gap-2">
+                    <svg class="p-1.5 w-fit h-fit bg-(--closed-accent) rounded-full" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none">
+                        <path d="M25.5512 6.45376C23.6632 4.56583 21.2577 3.28017 18.639 2.75934C16.0203 2.23851 13.3059 2.50591 10.8392 3.52772C8.37244 4.54952 6.26408 6.27985 4.78071 8.4999C3.29735 10.7199 2.50562 13.33 2.50562 16C2.50562 18.67 3.29735 21.2801 4.78071 23.5001C6.26408 25.7202 8.37244 27.4505 10.8392 28.4723C13.3059 29.4941 16.0203 29.7615 18.639 29.2407C21.2577 28.7198 23.6632 27.4342 25.5512 25.5463C26.8142 24.2979 27.8169 22.8113 28.5013 21.1727C29.1857 19.534 29.538 17.7758 29.538 16C29.538 14.2242 29.1857 12.466 28.5013 10.8274C27.8169 9.18869 26.8142 7.70212 25.5512 6.45376ZM23.4262 8.57876C23.8296 8.9801 24.1995 9.41361 24.5325 9.87501L21.125 13.8863L18.2125 5.73501C20.1895 6.15669 22.0016 7.14329 23.4287 8.57501L23.4262 8.57876ZM8.57 8.57876C10.2826 6.85752 12.542 5.78771 14.9587 5.55376L16.7287 10.51L8.21375 8.95126C8.33 8.82376 8.44875 8.69876 8.5725 8.57501L8.57 8.57876ZM6 19.2125C5.20803 16.7335 5.35938 14.0493 6.425 11.675L11.605 12.625L6 19.2125ZM8.56875 23.425C8.16703 23.0222 7.79874 22.5875 7.4675 22.125L10.875 18.1138L13.7875 26.265C11.8109 25.843 9.99933 24.8565 8.5725 23.425H8.56875ZM13.1137 15.4738L15.0112 13.2425L17.8937 13.7688L18.8787 16.5263L16.9825 18.7575L14.1 18.2313L13.1137 15.4738ZM23.425 23.425C21.7121 25.1458 19.4529 26.2155 17.0362 26.45L15.2687 21.5L23.7862 23.055C23.67 23.1763 23.5512 23.3013 23.4287 23.425H23.425ZM20.395 19.375L26 12.7875C26.7922 15.2666 26.6404 17.951 25.5737 20.325L20.395 19.375Z" fill="#4A00FF"/>
+                    </svg>
+                    <div class="flex-col">
+                        <h3 id="number-of-issues" class=" gap-2"><span id="issue-count">0</span> Issues</h3>
+                        <p class=" gap-2 mb-0">Track and manage your project issues</p>
+                    </div>
+                </div>
+                <div class="flex-center-x gap-4">
+                    <div class="flex-center-row-y gap-2">
+                        <span class="block w-2.5 aspect-square rounded-full bg-green-600"></span><span>Open</span>
+                    </div>
+                    <div class="flex-center-row-y gap-2">
+                        <span class="block w-2.5 aspect-square rounded-full bg-(--closed)"></span><span>Closed</span>
+                    </div>
+                </div>
+            </section>
+            <!-- section#card-container.grid.grid-cols-4.gap-3.p-6>div#card-1.border-white.border-t-purple-500.rounded-lg.shadow-.--cardShadow.p-4.flex-y>div.flex-y.gap-3>(div.flex-between>i+span.text-red-700.bg-red-300.border-red-700.rounded-2xl)+(div.flex-y.gap-2>h4+p.text-.--grey)+(div.flex-x.gap-1>span.text-red-700.bg-red-300.border-red-700.rounded-2xl+span.text-yellow-700.bg-yellow-300.border-yellow-700.rounded-2xl) -->
+             
+            <section id="card-container" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-3 p-1 sm:p-2 md:p-4 lg:p-6">
+                <!-- <div class="open-listed block">
+                    <div id="card-1" class="card status-based relative h-full border-white before:absolute rounded-lg shadow-(--cardShadow) p-2 md:p-3 lg:p-4 flex-y before:bg-(--closed) before:h-0.5 before:w-full before:top-0 before:left-0 before:rounded-t-lg">
+                        <div class="flex-y gap-3">
+                            <div class="flex-between flex-center-y">
+                                <span class="status-based flex-center bg-(--fuga-accent) rounded-full p-0.5"><img src="./assets/Open-Status.png" alt="" class="spinner fa-spin"></span>
+                                <span class="priority-based red-badge w-20 h-6 flex-center">High</span>
+                            </div>
+                            <div class="flex-y gap-2">
+                                <h4 class="title-based">Fix navigation menu on mobile devices</h4>
+                                <p class="description-based text-(--grey)">The navigation menu is not displaying correctly on mobile devices.</p>
+                            </div>
+                            <div class="label-based flex-x gap-1">
+                                <span class="red-badge flex-center-y gap-1 text-xs text-red-700 bg-red-100 border border-red-300 rounded-2xl p-2">
+                                    <i class="fas fa-bug"></i> BUG
+                                </span>
+                                <span class="yellow-badge flex-center-y gap-1 text-xs text-yellow-700 bg-yellow-100 border border-yellow-300 rounded-2xl p-2">
+                                    <i class="fas fa-life-ring"></i> HELP WANTED
+                                </span>
+                            </div>
+
+                            <hr class="text-(--input-border)">
+
+                            <div>
+                                <div class="flex-between text-(--grey)">
+                                    <p class="author-based">#1 by john_doe</p>
+                                    <p></p>
+                                </div>
+                                <div class="flex-between text-(--grey)">
+                                    <p class="created-date-based">1/15/2024</p>
+                                    <p></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div> -->
+            </section>
+
+            <!-- Watch Dogs 2 -->
+            <div id="selection" class="hidden fixed inset-0 z-50 bg-black/50 flex-center p-4" onclick="if(event.target===this){this.classList.add('hidden')}">
+                <!-- Card Watch -->
+                <div id="select-card" class="relative w-full max-w-sm sm:max-w-md md:max-w-lg rounded-lg shadow-(--cardShadow) p-5 sm:p-6 md:p-8 flex-y gap-4 overflow-y-auto max-h-[90vh]">
+                    <h3 id="watch-title" class="text-base sm:text-lg md:text-xl font-bold"></h3>
+
+                    <div class="flex-center-y flex-wrap gap-2 text-sm">
+                        <span id="watch-status" class="text-xs sm:text-sm rounded-md px-3 py-1 font-semibold"></span>
+                        <span class="text-(--grey)">•</span>
+                        <span id="watch-author" class="text-(--grey) text-xs sm:text-sm"></span>
+                        <span class="text-(--grey)">•</span>
+                        <span id="watch-date" class="text-(--grey) text-xs sm:text-sm"></span>
+                    </div>
+
+                    <div id="watch-labels" class="flex-x flex-wrap gap-2"></div>
+
+                    <p id="watch-description" class="text-(--grey) text-sm sm:text-base leading-relaxed"></p>
+
+                    <div class="flex flex-col sm:flex-row gap-3 sm:gap-8 border border-(--input-border) rounded-lg p-3 sm:p-4">
+                        <div class="flex-y gap-1">
+                            <span class="text-(--grey) text-xs sm:text-sm">Assignee:</span>
+                            <span id="watch-assignee" class="font-semibold text-sm sm:text-base"></span>
+                        </div>
+                        <div class="flex-y gap-1">
+                            <span class="text-(--grey) text-xs sm:text-sm">Priority:</span>
+                            <span id="watch-priority" class="font-semibold text-sm sm:text-base"></span>
+                        </div>
+                    </div>
+
+                    <div class="flex justify-end">
+                        <button id="watch-close-btn" class="btn btn-primary rounded-md px-6 py-2 cursor-pointer" onclick="document.getElementById('selection').classList.add('hidden')">Close</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+</body>
+<script src="./src/app.js"></script>
+<script src="./src/theme.js"></script>
+<script src="./src/watchCard.js"></script>
+<script src="./src/search.js"></script>
+</html>
