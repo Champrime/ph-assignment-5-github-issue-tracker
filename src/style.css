@@ -24,7 +24,7 @@ h1, h2, h3, h4, h5, .red-badge, .yellow-badge {
     transition: color 0.3s, background-color 0.3s, border-color 0.3s;
 }
 
-.red-badge, .yellow-badge{
+.red-badge, .yellow-badge, .green-badge, .cyan-badge, .purple-badge, .pale-badge{
     /* text-xs rounded-2xl p-2 */
     font-size: 0.75rem;
     border-radius: 1rem;
@@ -44,7 +44,26 @@ h1, h2, h3, h4, h5, .red-badge, .yellow-badge {
     border: 1px solid oklch(90.5% 0.182 98.111);
 }
 
-/* ::before .card {
+.green-badge {
+    color: var(--fuga);
+    background: var(--fuga-accent);
+    border: 1px solid #00452d;
+}
+
+.cyan-badge {
+    color: #008080;
+    background: #00FFFF;
+    border: 1px solid #046276;
+}
+
+.pale-badge {
+    color: #9CA3AF;
+    font-weight: 500;
+    background: #EEEFF2;
+    border: none;
+}
+
+::before .card {
     /* before:bg-(--fuga) before:h-0.5 before:w-full before:top-0 before:left-0 before:rounded-t-lg */
     position: absolute;
     top: 0;
@@ -54,4 +73,4 @@ h1, h2, h3, h4, h5, .red-badge, .yellow-badge {
     width: 100%;
     border-radius: 0.5rem 
 
-} */
+}

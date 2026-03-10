@@ -22,26 +22,51 @@ fetch(url)
 const addCard = (dataSet) => {
     let i = 1;
     dataSet.forEach((data) => {
+        // New card for new data
         const card = document.createElement("div");
+
+        // Updating label-based
+        const label = data.labels.map(label => {
+            let badge, icon;
+            switch (label) {
+                case "bug":
+                    badge = "red-badge";
+                    icon = "fas fa-bug";
+                    break;
+                case "help wanted":
+                    badge = "yellow-badge";
+                    icon = "fas fa-life-ring";
+                    break;
+                case "enhancement":
+                    badge = "green-badge";
+                    icon = "fas fa-arrow-up-wide-short";
+                    break;
+                case "documentation":
+                    badge = "cyan-badge";
+                    icon = "fas fa-file-lines";
+                    break;
+                default:
+                    badge = "pale-badge";
+                    icon = "fas fa-tag";
+                    break;
+            }
+            return `<span class="${badge} flex-center-y gap-1"><i class="${icon}"></i> ${label.toUpperCase()}</span>`;
+        }).join("");
+
         card.className = `${data.status === "open" ? "open-listed" : "close-listed" } block`;
         card.innerHTML = `
-                    <div id="card-${i}" class="status-based relative h-full border-white before:absolute rounded-lg shadow-(--cardShadow) p-2 md:p-3 lg:p-4 flex-y ${data.status === "open" ? "before:bg-(--fuga)" : "before:bg-(--closed)"} before:h-0.5 before:w-full before:top-0 before:left-0 before:rounded-t-lg">
+                    <div id="card-${i}" class="status-based relative h-full border-white before:absolute rounded-lg shadow-(--cardShadow) p-2 md:p-3 lg:p-4 flex-y before:bg-(${data.status === "open" ? "--fuga" : "--closed"}) before:h-0.5 before:w-full before:top-0 before:left-0 before:rounded-t-lg">
                         <div class="flex-y gap-3">
                             <div class="flex-between flex-center-y">
-                                <span class="status-based flex-center bg-(--fuga-accent) rounded-full p-0.5"><img src="./assets/Open-Status.png" alt="" class="spinner fa-spin"></span>
-                                <span class="priority-based red-badge w-20 h-6 flex-center">High</span>
+                                <span class="status-based flex-center bg-(${data.status === "open" ? "--fuga" : "--closed"}-accent) rounded-full p-0.5"><img src="./assets/Open-Status.png" alt="" class="spinner fa-spin"></span>
+                                <span class="priority-based ${data.priority === "high" ? "red-badge" : (data.priority === "medium" ? "yellow-badge" : "pale-badge")} w-20 h-6 flex-center">${data.priority[0].toUpperCase()+data.priority.slice(1)}</span>
                             </div>
                             <div class="flex-y gap-2">
-                                <h4 class="title-based">Fix navigation menu on mobile devices</h4>
-                                <p class="description-based text-(--grey)">The navigation menu is not displaying correctly on mobile devices.</p>
+                                <h4 class="title-based">${data.title}</h4>
+                                <p class="description-based text-(--grey)">${data.description}</p>
                             </div>
                             <div class="label-based flex-x gap-1">
-                                <span class="red-badge flex-center-y gap-1">
-                                    <i class="fas fa-bug"></i> BUG
-                                </span>
-                                <span class="yellow-badge flex-center-y gap-1">
-                                    <i class="fas fa-life-ring"></i> HELP WANTED
-                                </span>
+                                ${label}
                             </div>
 
                             <hr class="text-(--input-border)">
@@ -57,7 +82,7 @@ const addCard = (dataSet) => {
                                 </div>
                             </div>
                         </div>
-        `
+        `;
         container.appendChild(card); i++;
     })
 }
