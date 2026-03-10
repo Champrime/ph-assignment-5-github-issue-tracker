@@ -10,7 +10,49 @@
     --font-bangla: 'Anek Bangla', ui-sans-serif, system-ui, sans-serif;
 }
 
+[data-theme="synthwave"] {
+    --loginShadow: 0 5px 10px 2px rgba(255, 180, 255, 0.3);
+    --issueShadow: 0 0px 10px 1px rgba(255, 180, 255, 0.3);
+    --cardShadow: 0 3px 6px 0px rgba(255, 180, 255, 0.3);
+
+    h1 {
+        @apply text-purple-300 text-[2rem] font-bold leading-8;
+    }
+
+    h2 {
+        @apply text-purple-300 text-2xl font-bold;
+    }
+
+    h3 {
+        @apply text-purple-300 text-xl font-semibold;
+    }
+
+    h4 {
+        @apply text-purple-300 text-lg font-semibold leading-6.5;
+    }
+
+    h5{
+        @apply text-(--grey) font-normal leading-5.5;
+    }
+
+    .yellow-badge {
+        @apply text-yellow-100 bg-yellow-700 border-yellow-300;
+    }
+
+    .red-badge {
+        @apply text-red-100 bg-red-700 border-red-300;
+    }
+}
+
 @layer components{
+    .red-badge {
+        @apply text-xs text-red-700 bg-red-100 border-red-300 rounded-2xl p-2;
+    }
+
+    .yellow-badge {
+        @apply text-xs text-yellow-700 bg-yellow-100 border-yellow-300 rounded-2xl p-2;
+    }
+
     h1 {
         @apply text-(--black) text-[2rem] font-bold leading-8;
     }

@@ -12,13 +12,46 @@
     --closed-accent: #F0E2FF;
 }
 
+html, html * {
+    transition: color 0.3s, background-color 0.3s, border-color 0.3s, box-shadow 0.3s;
+}
+
 * {
     font-family: 'Montserrat', sans-serif;
 }
 
-.x {
-    background: var(--fuga);
-    height: 2px;
-    width: 100%;
-    position: absolute;
+h1, h2, h3, h4, h5, .red-badge, .yellow-badge {
+    transition: color 0.3s, background-color 0.3s, border-color 0.3s;
 }
+
+.red-badge, .yellow-badge{
+    /* text-xs rounded-2xl p-2 */
+    font-size: 0.75rem;
+    border-radius: 1rem;
+    padding: 0.5rem;
+}
+
+.red-badge {
+    /* text-red-700 bg-red-100 border-red-300 */
+    color: oklch(50.5% 0.213 27.518);
+    background: oklch(93.6% 0.032 17.717);
+    border: 1px solid oklch(80.8% 0.114 19.571);
+}
+
+.yellow-badge {
+    color: oklch(55.4% 0.135 66.442);
+    background: oklch(97.3% 0.071 103.193);
+    border: 1px solid oklch(90.5% 0.182 98.111);
+}
+
+/* ::before .card {
+    /* before:bg-(--fuga) before:h-0.5 before:w-full before:top-0 before:left-0 before:rounded-t-lg */
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: var(--fuga);
+    height: 0.125rem;
+    width: 100%;
+    border-radius: 0.5rem 
+
+} */
