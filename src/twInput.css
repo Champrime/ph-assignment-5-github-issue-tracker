@@ -58,6 +58,10 @@
     .red-badge {
         @apply text-red-100 bg-red-700 border-red-300;
     }
+
+    #select-card{
+        bg-(--text2)
+    }
 }
 
 @layer components{
