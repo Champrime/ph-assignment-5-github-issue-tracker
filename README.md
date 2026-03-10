@@ -1,3 +1,12 @@
+*Note: I tried everything I could. Please review my work like you're in charge of this and leave remark.
+Your remark will shape my career.
+
+mail: sadik97x@gmail.com
+whatsapp: +8801890372178
+
+Thanks for reading me.*
+
+
 # Q&A
 
 ### 1. What is the difference between var, let, and const?
