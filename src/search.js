@@ -21,6 +21,7 @@ searchInput.addEventListener("input", (x) => {
           With debounce, it fires just 1 — after the user finishes typing.
           This reduces unnecessary network requests and server load.
     */
+    
     clearTimeout(timer);
 
     timer = setTimeout(() => {
