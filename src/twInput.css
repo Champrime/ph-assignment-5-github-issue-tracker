@@ -44,7 +44,7 @@
     }
 
     .yellow-badge {
-        @apply text-yellow-100 bg-yellow-700 border-yellow-300;
+        @apply text-yellow-100 bg-yellow-500 border-yellow-300;
     }
 
     .pale-badge{
@@ -59,9 +59,14 @@
         @apply text-red-100 bg-red-700 border-red-300;
     }
 
-    #select-card{
-        bg-(--text2)
+    .select-card-ambience{
+        @apply bg-[rgb(74, 0, 255)]/30;
     }
+
+    #select-card{
+        @apply bg-base-content;
+    }
+    
 }
 
 @layer components{

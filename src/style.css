@@ -2,7 +2,7 @@
     --loginShadow: 0 5px 10px 2px rgba(0, 0, 0, 0.08);
     --issueShadow: 0 0px 10px 1px rgba(0, 0, 0, 0.08);
     --cardShadow: 0 3px 6px 0px rgba(0, 0, 0, 0.08);
-    --text2: #4A00FF;
+    --text2: rgb(74, 0, 255);
     --input-border: #E4E4E7;
     --grey: #64748B;
     --black: #1F2937;
@@ -10,10 +10,6 @@
     --fuga-accent: #CBFADB;
     --closed: #A855F7;
     --closed-accent: #F0E2FF;
-}
-
-html, html * {
-    transition: color 0.3s, background-color 0.3s, border-color 0.3s, box-shadow 0.3s;
 }
 
 * {
@@ -24,6 +20,10 @@ html, html * {
     color: var(--text2);
     background: var(--closed);
     border: 1px solid var(--closed-accent);
+}
+
+.select-card-ambience{
+    background: rgba(0, 0, 0, 0.5);
 }
 
 h1, h2, h3, h4, h5, .red-badge, .yellow-badge {

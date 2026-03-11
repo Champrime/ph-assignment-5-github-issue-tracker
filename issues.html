@@ -59,6 +59,9 @@
             <!-- section#card-container.grid.grid-cols-4.gap-3.p-6>div#card-1.border-white.border-t-purple-500.rounded-lg.shadow-.--cardShadow.p-4.flex-y>div.flex-y.gap-3>(div.flex-between>i+span.text-red-700.bg-red-300.border-red-700.rounded-2xl)+(div.flex-y.gap-2>h4+p.text-.--grey)+(div.flex-x.gap-1>span.text-red-700.bg-red-300.border-red-700.rounded-2xl+span.text-yellow-700.bg-yellow-300.border-yellow-700.rounded-2xl) -->
              
             <section id="card-container" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-3 p-1 sm:p-2 md:p-4 lg:p-6">
+                <div id="loading" class="col-span-full flex-center py-10">
+                    <span class="loading loading-spinner loading-lg text-(--text2)"></span>
+                </div>
                 <!-- <div class="open-listed block">
                     <div id="card-1" class="card status-based relative h-full border-white before:absolute rounded-lg shadow-(--cardShadow) p-2 md:p-3 lg:p-4 flex-y before:bg-(--closed) before:h-0.5 before:w-full before:top-0 before:left-0 before:rounded-t-lg">
                         <div class="flex-y gap-3">
@@ -97,9 +100,9 @@
             </section>
 
             <!-- Watch Dogs 2 -->
-            <div id="selection" class="hidden fixed inset-0 z-50 bg-black/50 flex-center p-4" onclick="if(event.target===this){this.classList.add('hidden')}">
+            <div id="selection" class="hidden fixed inset-0 z-50 select-card-ambience bg-blur flex-center p-4" onclick="if(event.target===this){this.classList.add('hidden')}">
                 <!-- Card Watch -->
-                <div id="select-card" class="relative w-full max-w-sm sm:max-w-md md:max-w-lg rounded-lg shadow-(--cardShadow) p-5 sm:p-6 md:p-8 flex-y gap-4 overflow-y-auto max-h-[90vh]">
+                <div id="select-card" class="relative w-full max-w-sm sm:max-w-md md:max-w-lg rounded-lg bg-base-300 shadow-(--cardShadow) p-5 sm:p-6 md:p-8 flex-y gap-4 overflow-y-auto max-h-[90vh]">
                     <h3 id="watch-title" class="text-base sm:text-lg md:text-xl font-bold"></h3>
 
                     <div class="flex-center-y flex-wrap gap-2 text-sm">

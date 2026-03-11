@@ -8,13 +8,13 @@ signInBtn.addEventListener("click", () => {
             case username.value === "" && password.value === "":
                 window.alert("Please enter your username and password.");
                 break;
-            case username.value.length <= 4 && password.value.length <= 7:
+            case username.value.length < 5 && password.value.length < 8:
                 window.alert("Username must be at least 5 characters and password must be at least 8 characters long.");
                 break;
-            case username.value.length <= 4:
+            case username.value.length < 5:
                 window.alert("Username must be at least 5 characters long.");
                 break;
-            case password.value.length <= 7:
+            case password.value.length < 8:
                 window.alert("Password must be at least 8 characters long.");
                 break;
             default:

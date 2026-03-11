@@ -29,7 +29,7 @@ document.getElementById("card-container").addEventListener("click", (e) => {
     watchDate.textContent = date;
     watchLabels.innerHTML = labels;
     watchDescription.textContent = description;
-    watchAssignee.textContent = assignee;
+    watchAssignee.textContent = (assignee ? assignee : "--");
     watchStatus.textContent = status;
     watchPriority.textContent = priority.toUpperCase();
 

@@ -9,12 +9,15 @@ const closed_Tab = document.getElementById("closed-tab");
 const url = "https://phi-lab-server.vercel.app/api/v1/lab/issues";
 
 
+document.getElementById("loading").classList.contains("hidden") ? remove("hidden") : "";
+
 fetch(url)
     .then(response => response.json())
     .then(dump => {
         issueCount.innerText = dump.data.length;
-        console.log(dump.status)
+        console.log(dump.status);
         addCard(dump.data);
+        document.getElementById("loading").classList.add("hidden");
     });
 
 const addCard = (dataSet) => {
