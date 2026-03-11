@@ -42,9 +42,7 @@ searchInput.addEventListener("input", (x) => {
           This reduces unnecessary network requests and server load.
     */
 
-    // timer = setTimeout(() => {
-    //     const value = x.target.value.trim();
-    //     // If the user clears out the search bar, api is hit again to restore the page's original information
+    //    
     //     if (value === "") {
     //         container.innerHTML = "";
     //         fetch(url)
@@ -56,16 +54,6 @@ searchInput.addEventListener("input", (x) => {
     //         return;
     //     }
 
-    //     // If there's a search value, hit the search API
-    //     container.innerHTML = "";
-    //     fetch(searchUrl + value)
-    //         .then(response => response.json())
-    //         .then(dump => {
-    //             issueCount.innerText = dump.data.length;
-    //             addCard(dump.data);
-    //         });
-    // }, 500);
-
     clearTimeout(timer);
 
     timer = setTimeout(() => {
@@ -74,7 +62,7 @@ searchInput.addEventListener("input", (x) => {
         container.innerHTML = "";
         document.getElementById("loading").classList.remove("hidden");
 
-        // If the user clears out the search bar, hit the base API to restore all issues
+        // If the user clears out the search bar, api is hit again to restore the page's original information
         const fetchUrl = value === "" ? url : searchUrl + value;
 
         fetch(fetchUrl)
