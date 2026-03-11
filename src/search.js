@@ -62,7 +62,7 @@ searchInput.addEventListener("input", (x) => {
         container.innerHTML = "";
         document.getElementById("loading").classList.remove("hidden");
 
-        // If the user clears out the search bar, api is hit again to restore the page's original information
+         // If the user clears out the search bar, api is hit again to restore the page's original information
         const fetchUrl = value === "" ? url : searchUrl + value;
 
         fetch(fetchUrl)
