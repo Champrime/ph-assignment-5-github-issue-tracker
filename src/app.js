@@ -9,7 +9,7 @@ const closed_Tab = document.getElementById("closed-tab");
 const url = "https://phi-lab-server.vercel.app/api/v1/lab/issues";
 
 
-document.getElementById("loading").classList.contains("hidden") ? remove("hidden") : "";
+// document.getElementById("loading").classList.contains("hidden") ? remove("hidden") : "";
 
 fetch(url)
     .then(response => response.json())
@@ -99,8 +99,8 @@ section_Tab.addEventListener("click", (event) => {
         if(!all.classList.contains("active")){
             all.classList.add("active"); open_Tab.classList.remove("active"); closed_Tab.classList.remove("active");
         };
-        openListed.forEach(el => el.classList.replace("hidden", "block") || el.classList.add("block"));
-        closeListed.forEach(el => el.classList.replace("hidden", "block") || el.classList.add("block"));
+        openListed.forEach(x => x.classList.replace("hidden", "block") || x.classList.add("block"));
+        closeListed.forEach(x => x.classList.replace("hidden", "block") || x.classList.add("block"));
         issueCount.innerText = openListed.length + closeListed.length;
     }
 
@@ -108,17 +108,17 @@ section_Tab.addEventListener("click", (event) => {
         if(!open_Tab.classList.contains("active")){
             open_Tab.classList.add("active"); all.classList.remove("active"); closed_Tab.classList.remove("active");
         }
-        openListed.forEach(el => el.classList.replace("hidden", "block") || el.classList.add("block"));
+        openListed.forEach(x => x.classList.replace("hidden", "block") || x.classList.add("block"));
         issueCount.innerText = openListed.length;
-        closeListed.forEach(el => el.classList.replace("block", "hidden") || el.classList.add("hidden"));
+        closeListed.forEach(x => x.classList.replace("block", "hidden") || x.classList.add("hidden"));
     }
 
     if (btn === closed_Tab) {
         if(!closed_Tab.classList.contains("active")){
             closed_Tab.classList.add("active"); all.classList.remove("active"); open_Tab.classList.remove("active");
         }
-        openListed.forEach(el => el.classList.replace("block", "hidden") || el.classList.add("hidden"));
+        openListed.forEach(x => x.classList.replace("block", "hidden") || x.classList.add("hidden"));
         issueCount.innerText = closeListed.length;
-        closeListed.forEach(el => el.classList.replace("hidden", "block") || el.classList.add("block"));
+        closeListed.forEach(x => x.classList.replace("hidden", "block") || x.classList.add("block"));
     }
 })

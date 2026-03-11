@@ -3,6 +3,26 @@ const searchUrl = "https://phi-lab-server.vercel.app/api/v1/lab/issues/search?q=
 
 let timer;
 
+// Applies the currently active tab filter and updates issueCount to match
+const tabFilter = () => {
+    const openListed = document.querySelectorAll(".open-listed");
+    const closeListed = document.querySelectorAll(".close-listed");
+
+    if (open_Tab.classList.contains("active")) {
+        openListed.forEach(x => x.classList.replace("hidden", "block") || x.classList.add("block"));
+        closeListed.forEach(x => x.classList.replace("block", "hidden") || x.classList.add("hidden"));
+        issueCount.innerText = openListed.length;
+    } else if (closed_Tab.classList.contains("active")) {
+        openListed.forEach(x => x.classList.replace("block", "hidden") || x.classList.add("hidden"));
+        closeListed.forEach(x => x.classList.replace("hidden", "block") || x.classList.add("block"));
+        issueCount.innerText = closeListed.length;
+    } else {
+        openListed.forEach(x => x.classList.replace("hidden", "block") || x.classList.add("block"));
+        closeListed.forEach(x => x.classList.replace("hidden", "block") || x.classList.add("block"));
+        issueCount.innerText = openListed.length + closeListed.length;
+    }
+};
+
 searchInput.addEventListener("input", (x) => {
     /*
         Debounce pattern -
@@ -21,30 +41,48 @@ searchInput.addEventListener("input", (x) => {
           With debounce, it fires just 1 — after the user finishes typing.
           This reduces unnecessary network requests and server load.
     */
-    
+
+    // timer = setTimeout(() => {
+    //     const value = x.target.value.trim();
+    //     // If the user clears out the search bar, api is hit again to restore the page's original information
+    //     if (value === "") {
+    //         container.innerHTML = "";
+    //         fetch(url)
+    //             .then(response => response.json())
+    //             .then(dump => {
+    //                 issueCount.innerText = dump.data.length;
+    //                 addCard(dump.data);
+    //             });
+    //         return;
+    //     }
+
+    //     // If there's a search value, hit the search API
+    //     container.innerHTML = "";
+    //     fetch(searchUrl + value)
+    //         .then(response => response.json())
+    //         .then(dump => {
+    //             issueCount.innerText = dump.data.length;
+    //             addCard(dump.data);
+    //         });
+    // }, 500);
+
     clearTimeout(timer);
 
     timer = setTimeout(() => {
         const value = x.target.value.trim();
-        // If the user clears out the search bar, api is hit again to restore the page's original information
-        if (value === "") {
-            container.innerHTML = "";
-            fetch(url)
-                .then(response => response.json())
-                .then(dump => {
-                    issueCount.innerText = dump.data.length;
-                    addCard(dump.data);
-                });
-            return;
-        }
 
-        // If there's a search value, hit the search API
         container.innerHTML = "";
-        fetch(searchUrl + value)
+        document.getElementById("loading").classList.remove("hidden");
+
+        // If the user clears out the search bar, hit the base API to restore all issues
+        const fetchUrl = value === "" ? url : searchUrl + value;
+
+        fetch(fetchUrl)
             .then(response => response.json())
             .then(dump => {
-                issueCount.innerText = dump.data.length;
                 addCard(dump.data);
+                document.getElementById("loading").classList.add("hidden");
+                tabFilter();
             });
     }, 500);
 });
